@@ -1,0 +1,259 @@
+hr{
+    margin: 20px auto;
+}
+/* TASK ONE */
+.grid.tone {
+    background-color: #ddd;
+    margin: 30px auto auto auto;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr;
+    gap: 15px 15px;
+}
+.grid.tone div{
+    background-color: #607d8b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid.tone .one::after{
+    content: "Element 1";
+    width: fit-content;
+}
+.grid.tone .two::after{
+    content: "Element 2";
+    width: fit-content;
+}
+.grid.tone .three::after{
+    content: "Element 3";
+    width: fit-content;
+}
+.grid.tone .four::after{
+    content: "Element 4";
+    width: fit-content;
+}
+.grid.tone .five::after{
+    content: "Element 5";
+    width: fit-content;
+}
+.grid.tone .six::after{
+    content: "Element 6";
+    width: fit-content;
+}
+/* TASK ONE */
+
+/* TASK TWO */
+*{
+    margin: 0px;
+}
+.layout{
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas: 
+        "head head head head head head head head head head "
+        "sec sec sec sec sec sec sec asid asid asid"
+        "footer footer footer footer footer footer footer footer footer footer" ;
+}
+header{
+    grid-area: head;
+    background-color: #03a9f4;
+    
+}
+section{
+    grid-area: sec;
+    background-color: #ff5722;
+}   
+aside{
+    grid-area: asid;
+    background-color: #607d8b;
+}    
+footer{
+    grid-area: footer;
+    background-color: #009688;
+}
+header::after{
+    content: "Header";
+    color: white;
+    margin: 10px;
+}
+section::after{
+    content:"Section";
+    color: white;
+}
+aside::before{
+    content: "Aside";
+    color: white;
+}
+footer::after{
+    content: "Footer";
+    color: white;
+}
+
+/* TASK TWO */
+
+/* TASK THREE */
+.grid.tthree {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin:20px auto;
+    display: grid;
+    grid-template-columns: 15px  repeat( 8 , 1fr) 15px;
+    grid-template-rows: 1fr 20px ;
+    gap: 20px 20px;
+    grid-template-areas:
+        "one two two two two three three three three four"
+        "five six six six six seven seven seven seven eight";
+}
+.grid.tthree .one,
+.grid.tthree .two,
+.grid.tthree .three,
+.grid.tthree .four,
+.grid.tthree .five,
+.grid.tthree .six,
+.grid.tthree .seven,
+.grid.tthree .eight{
+    background-color: #403f3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid.tthree .one{
+    grid-area: one;
+}
+.grid.tthree .two{
+    grid-area: two;
+}
+.grid.tthree .three{
+    grid-area: three;
+}
+.grid.tthree .four{
+    grid-area: four;
+}
+.grid.tthree .five{
+    grid-area: five;
+}
+.grid.tthree .six{
+    grid-area: six;
+}
+.grid.tthree .seven{
+    grid-area: seven;
+}
+.grid.tthree .eight{
+    grid-area: eight;
+}
+/* TASK THREE */
+
+/* TASK FOUR */
+.grid.tfour {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin:20px auto;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: repeat(6, 50px);
+    grid-template-areas:  
+        "eight eight eight eight eight eight eight eight eight eight"
+        "two two two two two two two  three three three"
+        "four four four     five five five five five five five"
+        "six six six        five five five five five five five"
+        "seven seven seven  five five five five five five five"
+        "one one one one one one one one one one";
+}
+.grid.tfour .one,
+.grid.tfour .two,
+.grid.tfour .three,
+.grid.tfour .four,
+.grid.tfour .five,
+.grid.tfour .six,
+.grid.tfour .seven,
+.grid.tfour .eight{
+    background-color: #2196f3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid.tfour .one{
+    grid-area: one;
+    order: 9;
+}
+.grid.tfour .two{
+    grid-area: two;
+}
+.grid.tfour .three{
+    grid-area: three;
+}
+.grid.tfour .four{
+    grid-area: four;
+}
+.grid.tfour .five{
+    grid-area: five;
+}
+.grid.tfour .six{
+    grid-area: six;
+}
+.grid.tfour .seven{
+    grid-area: seven;
+}
+.grid.tfour .eight{
+    grid-area: eight;
+    order: -1;
+}
+/* TASK FOUR */
+
+/* TASK FIVE */
+.grid.tfive {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 30px auto auto auto;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2 , 30px);
+    grid-template-areas: "one two" "three four";
+    gap: 15px 15px;
+    justify-content: center;
+    align-content: space-between;
+}
+.grid.tfive .one,
+.grid.tfive .two,
+.grid.tfive .three,
+.grid.tfive .four{
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid.tfive .one{
+    grid-area: one;
+}
+.grid.tfive .two{
+    grid-area: two;
+}
+.grid.tfive .three{
+    grid-area: three;
+}
+.grid.tfive .four{
+    grid-area: four;
+}
+/* TASK FIVE */
